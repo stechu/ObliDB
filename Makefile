@@ -66,9 +66,9 @@ endif
 endif
 
 ifeq ($(SGX_DEBUG), 1)
-        SGX_COMMON_CFLAGS += -O0 -g 
+        SGX_COMMON_CFLAGS += -O0 -g -w
 else
-        SGX_COMMON_CFLAGS += -O2 
+        SGX_COMMON_CFLAGS += -O2 -w
 endif
 
 ifeq ($(SUPPLIED_KEY_DERIVATION), 1)
